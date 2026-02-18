@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER FIJO ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* NAV SUPERIOR */
+.nav-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.9rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* LINKS DEL NAV */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* PARA QUE EL CONTENIDO NO QUEDE TAPADO */
+body {
+  margin-top: 90px;
+}
+
+/* ===== HERO CON IMAGEN ===== */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    ),
+    url("img/MkBg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+#hero p {
+  padding: 1rem;
+}
+
+/* ===== BOTÓN CTA ===== */
+.cta-button {
+  background-color: #fbe600;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #535600;
+}
+
+/* ===== SECCIÓN SERVICIOS ===== */
+#asesorias {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#asesorias h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.asesorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.asesoria-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.asesoria-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.asesoria-card h3 {
+  padding: 1rem;
+  text-align: center;
+}
+
+.descripcion {
+  padding: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f1f1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 430px) {
+
+  .nav-top {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+}
